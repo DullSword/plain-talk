@@ -1,0 +1,12 @@
+{
+  "name": "plain-talk",
+  "version": "0.1.0",
+  "repository": "https://github.com/DullSword/plain-talk",
+  "description": "通过钩子自动加载明白话规则，用直白、自然、方便扫读的表达方式回答问题。",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Plain Talk",
+    "shortDescription": "自动加载表达规则，按提问顺序回答，必要信息一次给全",
+    "category": "Productivity"
+  }
+}

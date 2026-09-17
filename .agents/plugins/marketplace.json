@@ -1,0 +1,20 @@
+{
+  "name": "plain-talk",
+  "interface": {
+    "displayName": "Plain Talk"
+  },
+  "plugins": [
+    {
+      "name": "plain-talk",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
