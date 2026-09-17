@@ -20,7 +20,9 @@ try {
   process.stdout.write(JSON.stringify({
     hookSpecificOutput: {
       hookEventName: eventName,
-      additionalContext: '明白话已加载。以下规则用于本任务中的回答、解释和结果汇报；用户明确要求的文体和格式优先。\n\n' + skill.slice(frontmatter[0].length).trim(),
+      additionalContext: eventName === 'UserPromptSubmit'
+        ? '继续遵守明白话规则：按用户提问顺序回答，用日常话把事情说准，必要信息一次给全。涉及代码时给出已核实的位置和具体改法，区分已确认、推测和未验证的内容。少套话、少重复，不为简短省略关键因果；用户只问分析时不要擅自修改。用户明确要求的文体和格式优先。'
+        : '明白话已加载。以下规则用于本任务中的回答、解释和结果汇报；用户明确要求的文体和格式优先。\n\n' + skill.slice(frontmatter[0].length).trim(),
     },
   }));
 } catch (error) {
