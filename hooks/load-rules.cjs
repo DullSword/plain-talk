@@ -4,7 +4,7 @@ const path = require('node:path');
 try {
   const event = JSON.parse(fs.readFileSync(0, 'utf8').replace(/^\uFEFF/, ''));
   const eventName = event.hook_event_name;
-  if (eventName !== 'SessionStart' && eventName !== 'SubagentStart') {
+  if (eventName !== 'SessionStart' && eventName !== 'SubagentStart' && eventName !== 'UserPromptSubmit') {
     throw new Error('不支持的 Hook 事件');
   }
   if (eventName === 'SessionStart' &&
